@@ -1,0 +1,18 @@
+{% extends 'social_app/base.html' %}
+{% load static %}
+
+
+
+    {% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'social_app/styles.css' %}">
+    <h1>User Detail</h1>
+    <p>Username : {{ user.username|upper }}</p>
+    <p>Email : {{ user.email }}</p>
+    <p>Bio {{ user.bio }}</p>
+    <p>Age {{ user.age }}</p>
+    <a href="{% url 'user_posts' username=user.username %}">View {{ user.username }}'s Posts</a>
+    <p><a href="{% url 'user_list' %}">Go back to user list</a></p>
+    <p><a href="{% url 'create_post' username=user.username %}">Create post</a></p>
+    <p><a href="{% url 'update_user' username=user.username %}">update user profile</a></p>
+    {% endblock %}
+

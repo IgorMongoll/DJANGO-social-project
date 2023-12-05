@@ -1,0 +1,19 @@
+<!-- social_app/templates/social_app/homepage.html -->
+{% extends 'social_app/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+</head>
+<body>
+{% block content %}
+<h1>Finally it's week</h1>
+ 
+<button><a href="{% url  'user_list' %}">Users</a></button>
+<button><a href="{% url  'create_user' %}">create user</a></button>
+{% endblock %} 
+    <p>helloooooo</p>
+</body>
+</html>

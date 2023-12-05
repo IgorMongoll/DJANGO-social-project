@@ -1,0 +1,14 @@
+{% extends 'social_app/base.html' %}
+
+{% block title %}Create Post - Social App{% endblock %}
+
+{% block content %}
+    <h1>Create Post</h1>
+
+<form method = 'post'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Create Post</button>
+</form>
+<a href="{% url 'post_list' %}">Back to post list</a>
+{% endblock %}

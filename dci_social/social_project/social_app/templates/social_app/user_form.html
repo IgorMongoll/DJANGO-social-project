@@ -1,0 +1,13 @@
+{% extends 'social_app/base.html' %}
+{% block title %}Create User - Social App{% endblock %}
+{% block content %}
+<h1>Create User</h1>
+<form method="post">
+{% csrf_token %}
+{{ form.as_p}}
+<button type="submit">Create User</button>
+
+</form>
+<a href="{% url 'user_list' %}">Back to user list</a>
+
+{% endblock %}

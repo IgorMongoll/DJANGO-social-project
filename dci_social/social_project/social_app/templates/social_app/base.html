@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>Welcome to our app feel free to post anything</header>
+    <button><a href="{% url  'home' %}">home</a></button>
+    {% block content %}
+<h1>helloooooo</h1>
+    {% endblock %}
+    <footer>
+        <!-- Add your footer content here -->
+        <p>&copy; 2023 Social App</p>
+    </footer>
+</body>
+</html>
